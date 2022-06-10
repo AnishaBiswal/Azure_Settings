@@ -25,9 +25,9 @@ public class UserDetailsController {
 	private UserDetailsService userDetailsService;
 	
 	@PostMapping("/addUserDetails")
-	public HashMap<String, String> addUserDetails(@RequestParam("uid") String uid,@RequestParam("name") String name,@RequestParam("email") String email,@RequestParam("position") String position, @RequestParam("role") String role)
+	public HashMap<String, String> addUserDetails(@RequestParam("uid") String uid,@RequestParam("name") String name,@RequestParam("email") String email,@RequestParam("position") String position)
 		{
-			return userDetailsService.saveUserDetails(uid,name, email,position,role);
+			return userDetailsService.saveUserDetails(uid,name, email,position);
 		}
 	
 	@GetMapping("/userDetails/uid/{uid}")
