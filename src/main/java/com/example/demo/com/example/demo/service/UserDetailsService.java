@@ -34,7 +34,7 @@ public class UserDetailsService {
 	private LeaderBoardRepository leaderBoardRepo;
 	
 	
-	public HashMap<String,String> saveUserDetails(String uid,String name,String email,String position,String role)
+	public HashMap<String,String> saveUserDetails(String uid,String name,String email,String position)
 	{
 		HashMap<String,String> details = new HashMap<String,String>();
 		
