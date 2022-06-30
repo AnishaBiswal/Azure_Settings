@@ -23,5 +23,19 @@ public class LeaderBoardController {
 		return leaderBoardService.topFive();
 	}
 	
+	
+	@GetMapping("/usersCount")
+	public HashMap<String,String> GetUserCount()
+	{
+		return leaderBoardService.getUsersCount();
+	}
+	
+	
+	@GetMapping("/filesCount")
+	public HashMap<String,String> GetFilesCount()
+	{
+		return leaderBoardService.getFilesCount();
+	}
+	
 
 }

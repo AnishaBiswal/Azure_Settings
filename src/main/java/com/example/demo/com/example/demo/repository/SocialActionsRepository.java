@@ -53,11 +53,11 @@ public interface SocialActionsRepository extends JpaRepository<SocialActions,Int
 	SocialActions getAllComments(@Param("id") int id);
 	
 	//for list view
-	@Query(value = "select cid from social_actions WHERE action='Download' group by cid ORDER BY COUNT(*) DESC LIMIT :n,15;",nativeQuery = true)
+	@Query(value = "select cid from social_actions WHERE action='Download' group by cid ORDER BY COUNT(*) DESC LIMIT :n,8;",nativeQuery = true)
 	ArrayList<Integer> findMostDownloadedListView(@Param("n") int n);
 
 
-	@Query(value = "select cid from social_actions WHERE action='Like' group by cid ORDER BY COUNT(*) DESC LIMIT :n,15;",nativeQuery = true)
+	@Query(value = "select cid from social_actions WHERE action='Like' group by cid ORDER BY COUNT(*) DESC LIMIT :n,8;",nativeQuery = true)
 	ArrayList<Integer> findMostLikedListview(@Param("n") int n);
 	
 	//get uid from id of social Action table

@@ -13,6 +13,14 @@ public interface PointsTableRepository extends JpaRepository<PointsTable, Intege
 	@Query(value=" SELECT points from points_table where action=:action order by id desc LIMIT 1", nativeQuery = true)
 	Integer pointsByAction(@Param("action") String action);
 	
+	//show all counts
+	
+	@Query(value="SELECT COUNT(*) FROM all_about_user",nativeQuery = true)
+	Integer numberofusers();
+	
+	@Query(value="SELECT COUNT(*) FROM files",nativeQuery = true)
+	Integer numberofartifacts();
+	
 	
 
 }

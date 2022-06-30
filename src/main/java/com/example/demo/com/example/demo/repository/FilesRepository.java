@@ -40,7 +40,7 @@ public interface FilesRepository extends JpaRepository<Files,Integer>{
 	ArrayList<Files> Latest(@Param("n") int n);
 	
 	//for list
-	@Query(value="SELECT * FROM files ORDER BY cid DESC LIMIT :n,15",nativeQuery = true)
+	@Query(value="SELECT * FROM files ORDER BY cid DESC LIMIT :n,8",nativeQuery = true)
 	ArrayList<Files> LatestGrid(@Param("n") int n);
 
 }

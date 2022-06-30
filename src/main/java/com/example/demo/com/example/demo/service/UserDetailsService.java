@@ -254,6 +254,25 @@ public class UserDetailsService {
 				return updatemap;
 			}
 		}
+	
+	
+	
+	
+	
+	
+	//check for admin
+	public boolean getRoleByEmail(String email)
+	{
+		String role = userDetailsRepo.GetRoleByEmail(email);
+		if(role.equals("Admin"))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 		
 		
 		

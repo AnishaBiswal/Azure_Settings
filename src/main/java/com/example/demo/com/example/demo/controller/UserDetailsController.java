@@ -67,5 +67,12 @@ public class UserDetailsController {
 	}
 	
 	
+	@GetMapping("/adminCheck/email/{email}")
+	public boolean AdminCheck(@PathVariable String email)
+	{
+		return userDetailsService.getRoleByEmail(email);
+	}
+	
+	
 
 }
